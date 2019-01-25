@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Fixed的bug</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0px;
+    }
+    
+    header {
+        position: fixed;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        top: 0px;
+        background: #ccc;
+    }
+    
+    .main {
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        bottom: 40px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mian .container {
+        height: 1200px;
+        width: 100%;
+        background: #fff;
+    }
+    
+    footer {
+        position: fixed;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        bottom: 0px;
+        background: #ccc;
+    }
+    
+    footer input,
+    footer button {
+        font-size: 18px;
+    }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="main">
+        <div class="container">
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+            我是内容，我是内容！<br>
+        </div>
+    </div>
+    <footer>
+        <input type="text" placeholder="来，输入手机号吧" />
+        <button class="submit">确定</button>
+    </footer>
+</body>
+
+
+
+</html>

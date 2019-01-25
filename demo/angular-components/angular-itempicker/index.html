@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular-itempicker</title>
+    <link rel="stylesheet" href="../angular-checkbox/dist/css/angular-checkbox.min.css" />
+    <link rel="stylesheet" href="./dist/css/angular-itempicker.min.css" />
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../angular-checkbox/dist/js/angular-checkbox.min.js"></script>
+    <script src="./dist/js/angular-itempicker.min.js"></script>
+    <style>
+        body{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <angular-itempicker options="pickItemParams"></angular-itempicker>
+</body>
+<script>
+var app = angular.module("app", ['ui.itempicker']);
+app.controller("ctrl", ['$scope', function($scope) {
+    $scope.pickItemParams = {
+        settings: {
+            key: "id",
+            value: "name",
+            searchPlaceholder: "请输入搜索内容"
+        },
+        sourceList: [{
+            "id": 1,
+            "name": "Karry"
+        }, {
+            "id": 1,
+            "name": "Karry"
+        }, {
+            "id": 3,
+            "name": "Narol"
+        }, {
+            "id": 4,
+            "name": "Leb"
+        }, {
+            "id": 5,
+            "name": "Cok"
+        }, {
+            "id": 6,
+            "name": "Yol"
+        }, {
+            "id": 7,
+            "name": "Keb"
+        }, {
+            "id": 8,
+            "name": "Tex"
+        }, {
+            "id": 9,
+            "name": "Hok"
+        }, {
+            "id": 10,
+            "name": "Zero"
+        }],
+        targetList: []
+    };
+}]);
+</script>
+
+</html>

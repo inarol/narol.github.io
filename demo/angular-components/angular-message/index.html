@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-message</title>
+    <link rel="stylesheet" href="./dist/css/angular-message.min.css" />
+    <script src="../bower_components/jquery/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="./dist/js/angular-message.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+
+</body>
+<script>
+    var app = angular.module("app",["ui.message"]);
+    app.controller("ctrl",["$messageFactory",function($messageFactory){
+        $messageFactory.popMessage({
+            message: "加载中",
+            type:2,
+            mask: true,
+            time:2000
+        });
+    }]);
+</script>
+</html>

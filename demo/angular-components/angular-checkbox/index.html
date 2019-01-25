@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="./dist/css/angular-checkbox.min.css" />
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./dist/js/angular-checkbox.min.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <input angular-checkbox="options" type="checkbox" name="checkbox" ng-model="checked" ng-true-value="'YES'" ng-false-value="'NO'" value="value" />
+    <h3>{{checked}}</h3>
+</body>
+<script>
+var app = angular.module("app", ["ui.checkbox"]);
+app.controller("ctrl", ['$scope', function($scope) {
+    $scope.checked = "YES";
+    $scope.value = "click me!";
+    $scope.options = {
+        onCheck:function(){
+        }
+    }
+}]);
+</script>
+
+</html>

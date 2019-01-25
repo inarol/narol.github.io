@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular-colorpicker</title>
+    <link rel="stylesheet" href="./dist/css/angular-colorpicker.min.css">
+    <script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./dist/js/angular-colorpicker.min.js"></script>
+    <style>
+		body{
+			background-color: #ccc;
+		}
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+<colorpicker color="color"></colorpicker>
+</body>
+<script>
+var app = angular.module('app', ['ui.colorpicker']);
+app.controller('ctrl', ['$scope',function($scope) {
+    $scope.color = "#fff";
+}]);
+</script>
+</html>

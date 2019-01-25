@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular-datetimepicker</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="./dist/css/angular-datetimepicker.min.css" />
+    <script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript" src="./dist/js/angular-datetimepicker.min.js"></script>
+    <style type="text/css">
+    body {
+        margin: 5px;
+    }
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <input type="text" datetimepicker="options" class="form-control" name="date" ng-model="date" placeholder="请输入时间" required readonly="readonly" />
+        </div>
+    </form>
+</body>
+<script>
+var app = angular.module("app", ["ui.datetimepicker"]);
+app.controller("ctrl", ['$scope', function($scope) {
+    $scope.options = {
+        format: "yyyy-mm-dd"
+    };
+}]);
+</script>
+
+</html>

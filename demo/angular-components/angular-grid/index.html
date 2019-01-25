@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular-grid</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./dist/css/angular-grid.min.css" />
+    <script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./dist/js/angular-grid.min.js"></script>
+    <style>
+        body{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <angular-table table-options="dataTable"></angular-table>
+</body>
+<script>
+var app = angular.module("app", ["ui.grid"]);
+app.controller("ctrl", ['$scope', 'TableFactory', function($scope, TableFactory) {
+    var tableOptions = {
+        settings: {
+            checkbox: true,
+            viewportNumbers: 10,
+            emptyPlaceholder: "暂无记录"
+        },
+        options: {
+            name: {
+                ChineseName: "名称",
+                width: "100"
+            },
+            updateOn: {
+                ChineseName: "更新时间",
+                width: "100",
+                formatDate: "yyyy-mm-dd"
+            },
+            remark: {
+                ChineseName: "备注",
+                width: "auto"
+            },
+            btnOperate: {
+                ChineseName: "操作",
+                width: "auto",
+                cellTemplate: function() {
+                    var insertBeforeButtonHtml = "<button ng-click='gridScope.insertBefore(tr,$rowScope);'>刷新</button>";
+                    var editButtonHtml = "<button ng-click='gridScope.edit(tr,$rowScope);'>编辑</button>";
+                    var removeButtonHtml = "<button ng-click='gridScope.remove($rowScope);'>删除</button>";
+                    return insertBeforeButtonHtml+editButtonHtml + removeButtonHtml;
+                }
+            }
+        }
+    };
+
+    var dataList = [];
+    for (var i = 0; i < 100; i++) {
+        dataList.push({
+            id: i,
+            name: i,
+            updateOn: new Date().getTime()+86400000*i,
+            remark: "备注信息"+i
+        });
+    }
+    $scope.dataTable = TableFactory.createTable(tableOptions, dataList);
+    $scope.edit = function(item, $rowScope) {
+        item.name = "渠道副本";
+        $rowScope.refresh();
+    };
+    $scope.remove = function($rowScope) {
+        $rowScope.remove();
+    };
+}]);
+</script>
+
+</html>

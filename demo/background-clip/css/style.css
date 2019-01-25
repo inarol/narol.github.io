@@ -1,0 +1,73 @@
+body{
+    background-color: #000;
+}
+h1 {
+    text-align: center;
+    font-size: 240px;
+    background: url("../images/repeat-white.png") center center repeat;
+    background-size: 80px 60px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: ani-h1 0.253s linear forwards infinite;
+    animation: ani-h1 0.253s linear forwards infinite;
+}
+
+@-webkit-keyframes ani-h1 {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 0;
+    }
+    26% {
+        background-position: 20px -20px;
+    }
+    50% {
+        background-position: 20px -20px;
+    }
+    51% {
+        background-position: 40px -40px;
+    }
+    75% {
+        background-position: 40px -40px;
+    }
+    76% {
+        background-position: 60px -60px;
+    }
+    99% {
+        background-position: 60px -60px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+h2 {
+    display: block;
+    margin: 10px auto 40px auto;
+    width: 800px;
+    font-family: "Arial";
+    font-size: 60px;
+    text-align: center;
+    color: transparent;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(left,#49c, #49c);
+    background-position: left center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 0% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: ani-h3 8s forwards infinite;
+    animation: ani-h3 6s forwards infinite;
+}
+
+@-webkit-keyframes ani-h3 {
+    from {
+        -webkit-background-size: 0% 100%;
+        background-size: 0% 100%;
+    }
+    to {
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+}
